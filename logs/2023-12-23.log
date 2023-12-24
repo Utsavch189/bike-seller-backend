@@ -1,0 +1,177 @@
+INFO : [23/Dec/2023 13:43:38 logger 7 7840 11768 package : src.auths.views.login_views --> position : LoginView.post]
+ERROR : [23/Dec/2023 13:43:38 logger 10 7840 11768 package : src.auths.views.login_views --> position : LoginView.post --> exception : password is wrong!]
+INFO : [23/Dec/2023 13:44:58 logger 7 12628 5248 package : src.auths.views.login_views --> position : LoginView.post]
+INFO : [23/Dec/2023 13:47:35 logger 7 12628 5248 package : src.auths.views.login_views --> position : LoginView.post]
+ERROR : [23/Dec/2023 13:47:35 logger 10 12628 5248 package : src.auths.views.login_views --> position : LoginView.post --> exception : user doesn't exists!]
+INFO : [23/Dec/2023 13:51:58 logger 7 11228 8140 package : src.auths.views.login_views --> position : LoginView.post]
+INFO : [23/Dec/2023 14:40:05 logger 7 11228 8140 package : src.auths.views.login_views --> position : LoginView.post]
+INFO : [23/Dec/2023 14:40:08 logger 7 11228 8140 package : src.auths.views.login_views --> position : LoginView.post]
+INFO : [23/Dec/2023 14:40:11 logger 7 11228 8140 package : src.auths.views.login_views --> position : LoginView.post]
+INFO : [23/Dec/2023 14:40:14 logger 7 11228 8140 package : src.auths.views.login_views --> position : LoginView.post]
+INFO : [23/Dec/2023 21:03:14 logger 7 2948 5264 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 21:03:15 logger 10 2948 5264 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 2 validation errors for BikeDTO
+bike_image.0.image_names
+  Field required [type=missing, input_value={'image_name': '123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+bike_image.1.image_names
+  Field required [type=missing, input_value={'image_name': '456'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 21:03:59 logger 7 9864 10124 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+INFO : [23/Dec/2023 21:07:22 logger 7 8864 4160 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 21:07:22 logger 10 8864 4160 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 2 validation errors for BikeDTO
+bike_image.0.image_names
+  Field required [type=missing, input_value={'image_name': '123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+bike_image.1.image_names
+  Field required [type=missing, input_value={'image_name': '456'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 21:07:46 logger 7 12280 13200 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 21:07:46 logger 10 12280 13200 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 2 validation errors for BikeDTO
+bike_image.0.image_names
+  Field required [type=missing, input_value={'image_name': '123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+bike_image.1.image_names
+  Field required [type=missing, input_value={'image_name': '456'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 21:08:38 logger 7 11780 13120 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 21:08:38 logger 10 11780 13120 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 2 validation errors for BikeDTO
+bike_image.0.image_names
+  Field required [type=missing, input_value={'image_name': '123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+bike_image.1.image_names
+  Field required [type=missing, input_value={'image_name': '456'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 21:08:51 logger 7 10448 7720 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 21:08:59 logger 10 10448 7720 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : ]
+INFO : [23/Dec/2023 21:09:07 logger 7 368 6184 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 21:09:15 logger 10 368 6184 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : ]
+INFO : [23/Dec/2023 21:09:37 logger 7 9436 11712 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+INFO : [23/Dec/2023 21:13:10 logger 7 9144 7880 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 21:13:10 logger 10 9144 7880 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 2 validation errors for BikeDTO
+bike_image.0.image_names
+  Field required [type=missing, input_value={'image_name': '123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+bike_image.1.image_names
+  Field required [type=missing, input_value={'image_name': '456'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 21:13:24 logger 7 11628 8728 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+INFO : [23/Dec/2023 21:14:04 logger 7 5380 10288 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 21:14:04 logger 10 5380 10288 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : __init__() takes 1 positional argument but 2 were given]
+INFO : [23/Dec/2023 21:14:29 logger 7 2724 9484 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 21:14:29 logger 10 2724 9484 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 1 validation error for BikeImageDTO
+image_names
+  Field required [type=missing, input_value={'image_name': '123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 21:15:13 logger 7 7600 2088 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+INFO : [23/Dec/2023 21:15:50 logger 7 10260 9864 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+INFO : [23/Dec/2023 21:16:27 logger 7 808 10676 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+INFO : [23/Dec/2023 21:37:43 logger 7 12060 10864 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+INFO : [23/Dec/2023 21:38:07 logger 7 5044 9588 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+INFO : [23/Dec/2023 22:31:21 logger 7 12188 3676 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:31:21 logger 10 12188 3676 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 1 validation error for BikeImageDTO
+image_b64
+  Field required [type=missing, input_value={'image_name': '123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 22:35:24 logger 7 7832 4052 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:35:24 logger 10 7832 4052 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 2 validation errors for BikeDTO
+image_name
+  Field required [type=missing, input_value={'bike_model': 'abc', 'br...r8X6K/UGKiiiCKKKIP//Z'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+image_b64
+  Field required [type=missing, input_value={'bike_model': 'abc', 'br...r8X6K/UGKiiiCKKKIP//Z'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 22:36:20 logger 7 2380 7236 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:36:20 logger 10 2380 7236 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 3 validation errors for BikeDTO
+image_name
+  Field required [type=missing, input_value={'bike_model': 'abc', 'br...r8X6K/UGKiiiCKKKIP//Z'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+image_b64
+  Field required [type=missing, input_value={'bike_model': 'abc', 'br...r8X6K/UGKiiiCKKKIP//Z'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+bike_image
+  Field required [type=missing, input_value={'bike_model': 'abc', 'br...r8X6K/UGKiiiCKKKIP//Z'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 22:36:39 logger 7 3024 12432 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:36:39 logger 10 3024 12432 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : 2 validation errors for BikeDTO
+image_name
+  Field required [type=missing, input_value={'bike_model': 'abc', 'br...r8X6K/UGKiiiCKKKIP//Z'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+image_b64
+  Field required [type=missing, input_value={'bike_model': 'abc', 'br...r8X6K/UGKiiiCKKKIP//Z'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing]
+INFO : [23/Dec/2023 22:37:05 logger 7 3024 12432 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:37:05 logger 10 3024 12432 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:37:55 logger 7 10328 4988 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:37:55 logger 10 10328 4988 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:38:26 logger 7 3640 11068 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:38:26 logger 10 3640 11068 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:40:42 logger 7 11136 4796 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:40:42 logger 10 11136 4796 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:42:45 logger 7 12812 8120 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:42:45 logger 10 12812 8120 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:43:46 logger 7 12620 1516 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:43:46 logger 10 12620 1516 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:44:16 logger 7 12364 10272 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:44:16 logger 10 12364 10272 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:45:48 logger 7 5052 3924 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:45:48 logger 10 5052 3924 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:47:46 logger 7 10956 3508 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:47:46 logger 10 10956 3508 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:48:43 logger 7 4668 1476 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:48:43 logger 10 4668 1476 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:50:10 logger 7 12324 1708 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:50:10 logger 10 12324 1708 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:50:44 logger 7 7608 1192 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:50:44 logger 10 7608 1192 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:51:10 logger 7 9572 4628 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:51:10 logger 10 9572 4628 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:51:32 logger 7 2444 10088 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:51:32 logger 10 2444 10088 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:51:46 logger 7 6192 11620 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:51:46 logger 10 6192 11620 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:52:49 logger 7 7740 9728 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:52:49 logger 10 7740 9728 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 22:53:58 logger 7 6588 11360 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 22:53:58 logger 10 6588 11360 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:02:04 logger 7 11144 12180 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:02:04 logger 10 11144 12180 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:02:52 logger 7 2564 3400 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:02:52 logger 10 2564 3400 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:03:46 logger 7 8644 3492 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:03:46 logger 10 8644 3492 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:04:32 logger 7 12324 2068 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:04:32 logger 10 12324 2068 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:05:08 logger 7 1948 5400 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:05:08 logger 10 1948 5400 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:05:23 logger 7 10440 9276 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:05:23 logger 10 10440 9276 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:06:22 logger 7 1316 1300 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:06:22 logger 10 1316 1300 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:13:06 logger 7 6184 5976 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:13:06 logger 10 6184 5976 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:13:19 logger 7 6184 5976 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:13:19 logger 10 6184 5976 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:13:20 logger 7 6184 5976 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:13:20 logger 10 6184 5976 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:13:22 logger 7 6184 5976 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:13:22 logger 10 6184 5976 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:13:57 logger 7 12948 12548 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:13:57 logger 10 12948 12548 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:14:19 logger 7 10180 12736 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:14:19 logger 10 10180 12736 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:15:02 logger 7 5492 10568 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:15:02 logger 10 5492 10568 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:15:04 logger 7 5492 10568 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:15:04 logger 10 5492 10568 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:15:06 logger 7 5492 10568 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:15:06 logger 10 5492 10568 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:15:31 logger 7 4000 4904 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:15:32 logger 10 4000 4904 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:15:34 logger 7 4000 4904 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:15:34 logger 10 4000 4904 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:15:36 logger 7 4000 4904 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:15:36 logger 10 4000 4904 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : image name already exists!]
+INFO : [23/Dec/2023 23:15:58 logger 7 12664 10316 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:15:59 logger 10 12664 10316 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
+INFO : [23/Dec/2023 23:18:43 logger 7 1636 5796 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post]
+ERROR : [23/Dec/2023 23:18:43 logger 10 1636 5796 package : src.admins.views.upload_bike_views --> position : UploadBikeViews.post --> exception : cannot unpack non-iterable NoneType object]
