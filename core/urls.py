@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/auth/',include('src.auths.routes')),
     path('api/v1/admins/',include('src.admins.routes')),
+    path('api/v1/customer/',include('src.customer.routes')),
     
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

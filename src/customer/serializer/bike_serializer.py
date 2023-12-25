@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from rest_framework.fields import empty
 from src.admins.models import Bike
-from src.admins.serializer.bikemeta_serializer import BikeMetaSerializer
-from src.admins.serializer.bikeimage_serializer import BikeImagesSerializer
+from src.customer.serializer.bikemeta_serializer import BikeMetaSerializer
+from src.customer.serializer.bikeimage_serializer import BikeImagesSerializer
 
 class BikeSerializer(serializers.ModelSerializer):
 

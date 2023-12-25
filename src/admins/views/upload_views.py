@@ -2,16 +2,16 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from core.utils.decorator.handelException import handel_exception
 from core.utils.decorator.logger import log
-from src.admins.service.get_bike_service import GetBikeService
+from src.admins.service.upload_service import UploadBikeService
 
 import logging
 
 logger=logging.getLogger('mylogger')
 
-class GetBikeViews(APIView):
+class UploadBikeViews(APIView):
 
     @handel_exception
     @log(logger=logger)
-    def get(self,request,model_id:str)->Response:
-        message,status=GetBikeService().get(model_id=model_id)
+    def post(self,request)->Response:
+        message,status=UploadBikeService().upload(data=request.data)
         return Response(data=message,status=status)
