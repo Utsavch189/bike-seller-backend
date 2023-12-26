@@ -9,6 +9,7 @@ def handel_exception(func):
         try:
             return func(*args, **kwargs)
         except Exception as e:
+             
              if (type(e)==ValidationError):
                 _error={}
                 for i in e.errors():

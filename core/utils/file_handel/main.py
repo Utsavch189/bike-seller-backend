@@ -1,6 +1,6 @@
 import os
 
-class FileWrite:
+class FileHandel:
 
     @staticmethod
     def write(filename:str="",decoded_data:str="",subdir="")->str:
@@ -13,5 +13,17 @@ class FileWrite:
                 f.close()
             return f'/media/{subdir}/{filename}'
             
+        except Exception as e:
+            raise Exception(str(e))
+    
+    @staticmethod
+    def delete(path="")->str:
+        try:
+            path=path[1:]
+            if os.path.exists(path):
+                os.remove(path)
+                return ""
+            else:
+                raise Exception("file not found!")
         except Exception as e:
             raise Exception(str(e))

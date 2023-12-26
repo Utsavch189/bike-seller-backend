@@ -7,6 +7,7 @@ class BikeMetaSerializer(serializers.ModelSerializer):
         model=BikeMeta
         fields=(
             'bikemeta_id',
+            'bike',
             'asking_price',
             'year_of_model',
             'engine_cc',

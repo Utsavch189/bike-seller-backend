@@ -1,20 +1,25 @@
 from pydantic import BaseModel,constr,validator,ValidationError
-from src.admins.models import BikeImages
+from src.admins.models import Bike
 import base64
 
-class BikeImageDTO(BaseModel):
-    image_name:constr(max_length=100,strip_whitespace=True)=""
+class UpdateBikeDTO(BaseModel):
+    bike_model_id:constr(min_length=1,max_length=100,strip_whitespace=True)
+    bike_model:constr(min_length=1,max_length=100,strip_whitespace=True)
+    brand_name:constr(min_length=1,max_length=100,strip_whitespace=True)
+    bike_name:constr(min_length=1,max_length=100,strip_whitespace=True)
     image_b64:constr(strip_whitespace=True)=""
-
+    image_name:constr(max_length=100,strip_whitespace=True)=""
+    image_path:constr(max_length=100,strip_whitespace=True)=""
+    
     @validator('image_name',allow_reuse=True,always=True)
-    def check_imageALrteadyExists(cls,value):
+    def check_imageALrteadyExists(cls,value,values):
         try:
             if value:
-                if BikeImages.objects.filter(image_name=value).exists():
+                if values['image_b64'] and Bike.objects.filter(image_name=value).exists():
                     raise Exception("already same image name exists!")
                 return value
             return ""
-        except Exception as e:
+        except ValidationError as e:
             raise Exception(str(e))
     
     @validator('image_b64',allow_reuse=True,always=True)
@@ -26,7 +31,6 @@ class BikeImageDTO(BaseModel):
                 else:
                     return base64.b64decode(value)
             return ""
-        except Exception as e:
+        except ValidationError as e:
             raise Exception(str(e))
-
 

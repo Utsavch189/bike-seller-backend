@@ -38,3 +38,8 @@ ERROR : [25/Dec/2023 09:41:48 logger 10 12720 6984 package : src.admins.views.up
 INFO : [25/Dec/2023 09:41:59 logger 7 7064 10856 package : src.admins.views.upload_views --> position : UploadBikeViews.post]
 ERROR : [25/Dec/2023 09:41:59 logger 10 7064 10856 package : src.admins.views.upload_views --> position : UploadBikeViews.post --> exception : a bytes-like object is required, not 'str']
 INFO : [25/Dec/2023 09:42:18 logger 7 5784 1836 package : src.admins.views.upload_views --> position : UploadBikeViews.post]
+INFO : [25/Dec/2023 20:37:21 logger 7 4504 3552 package : src.customer.views.get_views --> position : GetBikeViews.get]
+ERROR : [25/Dec/2023 20:37:21 logger 10 4504 3552 package : src.customer.views.get_views --> position : GetBikeViews.get --> exception : you pass params in wrong way!]
+INFO : [25/Dec/2023 20:37:32 logger 7 4504 3552 package : src.customer.views.get_views --> position : GetBikeViews.get]
+INFO : [25/Dec/2023 20:43:19 logger 7 8868 6496 package : src.customer.views.get_views --> position : GetBikeViews.get]
+INFO : [25/Dec/2023 21:00:20 logger 7 8868 6496 package : src.customer.views.get_views --> position : GetBikeViews.get]

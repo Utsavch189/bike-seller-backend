@@ -1,4 +1,4 @@
-from rest_framework.response import Response
+from core.utils.responses.response import Response
 from rest_framework.views import APIView
 from src.auths.dto.login_dto import LoginDTO
 from src.auths.service.login_service import LoginService

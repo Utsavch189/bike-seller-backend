@@ -1,6 +1,6 @@
 from django.db import transaction
 from src.admins.models import Bike,BikeMeta,BikeImages
-from core.utils.file_write.main import FileWrite
+from core.utils.file_handel.main import FileHandel
 from core.utils.threads.main import Thread
 from rest_framework import status
 from src.customer.serializer.bike_serializer import BikeSerializer
@@ -39,7 +39,7 @@ class UploadBikeService:
         if BikeImages.objects.filter(image_name=dto.image_name).exists():
             raise Exception("already same image name exists!")
 
-        _image_path=FileWrite.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=bike.bike_model)
+        _image_path=FileHandel.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=bike.bike_model)
 
         bikeimage=BikeImages(
             bikeimage_id=uuid.uuid1(),
@@ -54,7 +54,7 @@ class UploadBikeService:
         if Bike.objects.filter(image_name=dto.image_name).exists():
             raise Exception("already same image name exists!")
 
-        _image_path=FileWrite.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=dto.bike_model)
+        _image_path=FileHandel.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=dto.bike_model)
         
         bike=Bike(
             bike_model_id=uuid.uuid1(),
@@ -77,7 +77,7 @@ class UploadBikeService:
 
             bikedto=BikeDTO(**data)
             bikemetadto=BikeMetaDTO(**bike_meta_data[0])
-            print(bikedto)
+
             _bike_instace=self.__createBike(dto=bikedto)
             
     

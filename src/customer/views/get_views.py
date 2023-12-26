@@ -1,5 +1,5 @@
 from rest_framework.views import APIView
-from rest_framework.response import Response
+from core.utils.responses.response import Response
 from core.utils.decorator.handelException import handel_exception
 from core.utils.decorator.logger import log
 from src.customer.service.get_service import GetBikeService

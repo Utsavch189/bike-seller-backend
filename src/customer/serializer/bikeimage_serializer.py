@@ -8,5 +8,6 @@ class BikeImagesSerializer(serializers.ModelSerializer):
         fields=(
             'bikeimage_id',
             'image_name',
-            'image_path'
+            'image_path',
+            'bike'
         )
