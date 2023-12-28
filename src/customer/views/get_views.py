@@ -14,7 +14,6 @@ class GetBikeViews(APIView):
     @log(logger=logger)
     def get(self,request)->Response:
         QUERY_STRING=request.META.get('QUERY_STRING')
-        print(request.META.get('PATH_INFO'))
         if QUERY_STRING:
             QUERY_STRING_LIST=QUERY_STRING.split('?')
             QUERY_STRING_LIST[len(QUERY_STRING_LIST)-1]=QUERY_STRING_LIST[len(QUERY_STRING_LIST)-1].split('/')[0]
