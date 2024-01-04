@@ -15,7 +15,6 @@ class UploadBikeService:
     
     def __createBikeMeta(self,bike:Bike,dto:BikeMetaDTO)->BikeMeta:
     
-
         bikemeta=BikeMeta(
             bikemeta_id=uuid.uuid1(),
             bike=bike,
@@ -50,11 +49,13 @@ class UploadBikeService:
         return bikeimage
 
     def __createBike(self,dto:BikeDTO)->Bike:
+        if dto.image_name:
+            if Bike.objects.filter(image_name=dto.image_name).exists():
+                raise Exception("already same image name exists!")
 
-        if Bike.objects.filter(image_name=dto.image_name).exists():
-            raise Exception("already same image name exists!")
-
-        _image_path=FileHandel.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=dto.bike_model)
+            _image_path=FileHandel.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=dto.bike_model)
+        else:
+            _image_path=""
         
         bike=Bike(
             bike_model_id=uuid.uuid1(),
@@ -64,31 +65,13 @@ class UploadBikeService:
             image_path=_image_path,
             image_name=dto.image_name
         )
-
         return bike
     
     @transaction.atomic()
     def upload(self,data)->tuple:
         try:
-            bike_image_data=data.pop('bike_image')
-            bike_meta_data=data.pop('bike_meta')
-            
-
-
-            bikedto=BikeDTO(**data)
-            bikemetadto=BikeMetaDTO(**bike_meta_data[0])
-
-            _bike_instace=self.__createBike(dto=bikedto)
-            
-    
-            _bikemeta_instace=self.__createBikeMeta(bike=_bike_instace,dto=bikemetadto)
-
-            _bike_instace.save()
-            _bikemeta_instace.save()
-           
-            
-       
-            if bike_image_data:
+            if data.get('bike_image'):
+                bike_image_data=data.pop('bike_image')
                 threads=[]
                 for i in bike_image_data:
                     t=Thread(target=self.createBikeImages,args=(_bike_instace,BikeImageDTO(**i)))
@@ -98,6 +81,21 @@ class UploadBikeService:
                 for thread in threads:
                     res=thread.join()
                     res.save()
+
+            bike_meta_data=data.pop('bike_meta')
+            
+            bikedto=BikeDTO(**data)
+            bikemetadto=BikeMetaDTO(**bike_meta_data[0])
+            
+            
+            _bike_instace=self.__createBike(dto=bikedto)
+            print('ok')
+    
+            _bikemeta_instace=self.__createBikeMeta(bike=_bike_instace,dto=bikemetadto)
+
+            _bike_instace.save()
+            _bikemeta_instace.save()
+                
                     
             return ({
                 "message":"bike info is created!",
