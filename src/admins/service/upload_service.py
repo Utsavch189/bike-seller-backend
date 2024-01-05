@@ -1,7 +1,6 @@
 from django.db import transaction
 from src.admins.models import Bike,BikeMeta,BikeImages
 from core.utils.file_handel.main import FileHandel
-from core.utils.threads.main import Thread
 from rest_framework import status
 from src.customer.serializer.bike_serializer import BikeSerializer
 import uuid
@@ -72,15 +71,8 @@ class UploadBikeService:
         try:
             if data.get('bike_image'):
                 bike_image_data=data.pop('bike_image')
-                threads=[]
-                for i in bike_image_data:
-                    t=Thread(target=self.createBikeImages,args=(_bike_instace,BikeImageDTO(**i)))
-                    t.start()
-                    threads.append(t)
-
-                for thread in threads:
-                    res=thread.join()
-                    res.save()
+            else:
+                bike_image_data=[]
 
             bike_meta_data=data.pop('bike_meta')
             
@@ -89,9 +81,14 @@ class UploadBikeService:
             
             
             _bike_instace=self.__createBike(dto=bikedto)
-            print('ok')
+            
     
             _bikemeta_instace=self.__createBikeMeta(bike=_bike_instace,dto=bikemetadto)
+
+            if bike_image_data:
+                for i in bike_image_data:
+                    bikeimage=self.createBikeImages(_bike_instace,BikeImageDTO(**i))
+                    bikeimage.save()
 
             _bike_instace.save()
             _bikemeta_instace.save()
