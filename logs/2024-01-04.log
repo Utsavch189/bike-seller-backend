@@ -45,3 +45,4 @@ ERROR : [04/Jan/2024 10:22:19 logger 10 2528 3212 package : core.utils.decorator
 INFO : [04/Jan/2024 10:22:37 logger 7 12736 7944 package : core.utils.decorator.is_admin --> position : isAdmin.<locals>.inner]
 ERROR : [04/Jan/2024 10:22:37 logger 10 12736 7944 package : core.utils.decorator.is_admin --> position : isAdmin.<locals>.inner --> exception : local variable '_image_path' referenced before assignment]
 INFO : [04/Jan/2024 10:23:27 logger 7 5436 6700 package : core.utils.decorator.is_admin --> position : isAdmin.<locals>.inner]
+INFO : [04/Jan/2024 10:32:00 logger 7 5436 6700 package : src.customer.views.get_views --> position : GetBikeViews.get]

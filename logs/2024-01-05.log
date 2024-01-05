@@ -1,0 +1,3 @@
+INFO : [05/Jan/2024 12:21:43 logger 7 12296 3772 package : src.customer.views.get_views --> position : GetBikeViews.get]
+INFO : [05/Jan/2024 12:22:36 logger 7 1688 6416 package : src.customer.views.get_views --> position : GetBikeViews.get]
+INFO : [05/Jan/2024 12:22:42 logger 7 1688 3848 package : src.customer.views.get_views --> position : GetBikeViews.get]
