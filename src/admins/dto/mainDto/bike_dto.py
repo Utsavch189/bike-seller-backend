@@ -14,7 +14,7 @@ class BikeDTO(BaseModel):
         try:
             if value:
                 value_array=value.split('.')
-                image_name=value_array[0]+f'{int(datetime.timestamp(datetime.now()))}'+value_array[1]
+                image_name=value_array[0]+f'{int(datetime.timestamp(datetime.now()))}'+'.'+value_array[1]
                 return image_name
             return ""
         except ValidationError as e:
