@@ -8,8 +8,8 @@ class UpdateBikeDTO(BaseModel):
     bike_model:constr(min_length=1,max_length=100,strip_whitespace=True)
     brand_name:constr(min_length=1,max_length=100,strip_whitespace=True)
     bike_name:constr(min_length=1,max_length=100,strip_whitespace=True)
-    image_b64:constr(strip_whitespace=True)=""
     image_name:constr(max_length=100,strip_whitespace=True)=""
+    image_b64:constr(strip_whitespace=True)=""
     image_path:constr(max_length=100,strip_whitespace=True)=""
     
     @validator('image_name',allow_reuse=True,always=True)
