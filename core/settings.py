@@ -177,7 +177,7 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:3001' 
   )
 
-CSRF_TRUSTED_ORIGINS=['http://localhost:3000','http://localhost:3001'
+CSRF_TRUSTED_ORIGINS=['http://localhost:3000','http://localhost:3001','https://api.utsavchatterjee.me'
 ]
 
 APPEND_SLASH=True
