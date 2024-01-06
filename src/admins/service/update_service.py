@@ -12,13 +12,14 @@ class UpdateBikeService:
     def __updateBike(self,dto:UpdateBikeDTO)->Bike:
         bike=Bike.objects.get(bike_model_id=dto.bike_model_id)
 
-        if dto.image_name=="" and dto.image_path=="":
+        if dto.image_name=="" and dto.image_path=="" and bike.image_path!="":
             #user deletes bike's profile image
             dto.image_path=FileHandel.delete(bike.image_path)
             
         elif dto.image_name and dto.image_path=="" and dto.image_b64:
             #user changes bike's profile image
             dto.image_path=FileHandel.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=dto.bike_model)
+    
         
         bike.bike_model=dto.bike_model
         bike.brand_name=dto.brand_name
