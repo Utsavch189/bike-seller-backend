@@ -6,14 +6,16 @@ class BikeDTO(BaseModel):
     bike_model:constr(min_length=1,max_length=100,strip_whitespace=True)
     brand_name:constr(min_length=1,max_length=100,strip_whitespace=True)
     bike_name:constr(min_length=1,max_length=100,strip_whitespace=True)
-    image_name:constr(max_length=100,strip_whitespace=True)=""
+    image_name:constr(strip_whitespace=True)=""
     image_b64:constr(strip_whitespace=True)=""
 
     @validator('image_name',allow_reuse=True,always=True)
     def check_imageALrteadyExists(cls,value):
         try:
             if value:
-                return value+f'{int(datetime.timestamp(datetime.now()))}'
+                value_array=value.split('.')
+                image_name=value_array[0]+f'{int(datetime.timestamp(datetime.now()))}'+value_array[1]
+                return image_name
             return ""
         except ValidationError as e:
             raise Exception(str(e))

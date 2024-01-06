@@ -5,8 +5,8 @@ class Bike(models.Model):
     bike_model_id=models.CharField(max_length=100,primary_key=True,default="")
     bike_model=models.CharField(max_length=100,null=True,blank=True)
     brand_name=models.CharField(max_length=100,null=True,blank=True)
-    bike_name=models.CharField(max_length=100,null=True,blank=True)
-    image_path=models.CharField(max_length=100,null=True,blank=True)
+    bike_name=models.TextField(null=True,blank=True,default="")
+    image_path=models.TextField(null=True,blank=True,default="")
     image_name=models.CharField(max_length=100,null=True,blank=True,unique=True)
 
     def __str__(self) -> str:
@@ -25,7 +25,7 @@ class BikeMeta(models.Model):
     mileage=models.CharField(max_length=50,null=True,blank=True)
     buy_year=models.CharField(max_length=10,null=True,blank=True)
     color=models.CharField(max_length=50,null=True,blank=True)
-    details=models.TextField()
+    details=models.TextField(null=True,blank=True,default="")
     latest_upload=models.DateTimeField(default=datetime.now())
 
     def __str__(self) -> str:
@@ -34,8 +34,8 @@ class BikeMeta(models.Model):
 class BikeImages(models.Model):
     bikeimage_id=models.CharField(max_length=100,primary_key=True,default="")
     bike=models.ForeignKey(Bike,on_delete=models.CASCADE,related_name='bike_image')
-    image_path=models.CharField(max_length=100,null=True,blank=True)
-    image_name=models.CharField(max_length=100,null=True,blank=True,unique=True)
+    image_path=models.TextField(null=True,blank=True,default="")
+    image_name=models.TextField(null=True,blank=True,default="")
 
     def __str__(self) -> str:
         return self.bike.bike_model
