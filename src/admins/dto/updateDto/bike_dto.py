@@ -1,5 +1,6 @@
 from pydantic import BaseModel,constr,validator,ValidationError
 from src.admins.models import Bike
+from datetime import datetime
 import base64
 
 class UpdateBikeDTO(BaseModel):
@@ -15,9 +16,9 @@ class UpdateBikeDTO(BaseModel):
     def check_imageALrteadyExists(cls,value,values):
         try:
             if value:
-                if values['image_b64'] and Bike.objects.filter(image_name=value).exists():
-                    raise Exception("already same image name exists!")
-                return value
+                value_array=value.split('.')
+                image_name=value_array[0]+f'{int(datetime.timestamp(datetime.now()))}'+'.'+value_array[1]
+                return image_name
             return ""
         except ValidationError as e:
             raise Exception(str(e))
