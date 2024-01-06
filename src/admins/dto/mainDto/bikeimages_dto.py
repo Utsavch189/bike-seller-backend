@@ -1,5 +1,5 @@
 from pydantic import BaseModel,constr,validator,ValidationError
-from src.admins.models import BikeImages
+from datetime import datetime
 import base64
 
 class BikeImageDTO(BaseModel):
@@ -10,9 +10,7 @@ class BikeImageDTO(BaseModel):
     def check_imageALrteadyExists(cls,value):
         try:
             if value:
-                if BikeImages.objects.filter(image_name=value).exists():
-                    raise Exception("already same image name exists!")
-                return value
+                return value+f'{int(datetime.timestamp(datetime.now()))}'
             return ""
         except Exception as e:
             raise Exception(str(e))
