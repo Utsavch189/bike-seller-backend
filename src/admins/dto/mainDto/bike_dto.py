@@ -9,6 +9,14 @@ class BikeDTO(BaseModel):
     image_name:constr(strip_whitespace=True)=""
     image_b64:constr(strip_whitespace=True)=""
 
+    @validator('bike_model',allow_reuse=True,always=True)
+    def validate_bike_model(cls,value):
+        try:
+            if value:
+                return value.upper()
+        except ValidationError as e:
+            raise Exception(str(e))
+
     @validator('image_name',allow_reuse=True,always=True)
     def check_imageALrteadyExists(cls,value):
         try:
