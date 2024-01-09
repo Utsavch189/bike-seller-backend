@@ -9,5 +9,5 @@ url3 = 'get-bikes/'
 """
 
 urlpatterns=[
-    re_path(r'^get-bikes(?:\?model_id=[a-zA-Z0-9_-]+)?(?:\?model_name=[a-zA-Z0-9_-]+(?:\?page=[a-zA-Z0-9_-]&page-size=[a-zA-Z0-9_-]))?/$', GetBikeViews.as_view()),
+    re_path(r'^get-bikes(?:\?model_id=[a-zA-Z0-9_-]+(?:\?model_name=[a-zA-Z0-9_-]+)+(?:\?page=[a-zA-Z0-9_-]&page-size=[a-zA-Z0-9_-]))?', GetBikeViews.as_view()),
 ]

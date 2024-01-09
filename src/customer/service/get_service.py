@@ -9,6 +9,7 @@ class GetBikeService:
     def get(self,query:dict)->tuple:
         try:
             count=bike=Bike.objects.count()
+            print(query)
             if not query:
                 bike=Bike.objects.all()
                 data=BikeSerializer(bike,many=True).data

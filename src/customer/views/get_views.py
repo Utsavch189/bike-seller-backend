@@ -4,7 +4,7 @@ from core.utils.decorator.handelException import handel_exception
 from core.utils.decorator.logger import log
 from src.customer.service.get_service import GetBikeService
 
-import logging
+import logging,re
 
 logger=logging.getLogger('mylogger')
 
@@ -15,10 +15,11 @@ class GetBikeViews(APIView):
     def get(self,request)->Response:
         QUERY_STRING=request.META.get('QUERY_STRING')
         if QUERY_STRING:
-            QUERY_STRING_LIST=QUERY_STRING.split('?')
-            QUERY_STRING_LIST[len(QUERY_STRING_LIST)-1]=QUERY_STRING_LIST[len(QUERY_STRING_LIST)-1].split('/')[0]
-            QUERY_STRING_DICT = {key_value.split('=')[0]: key_value.split('=')[1].rstrip('/') for key_value in QUERY_STRING_LIST}
+            res=re.split(r'[?&/]',QUERY_STRING)
+            if res[len(res)-1]=='':
+                res.pop()
+            query_dict={key_value.split('=')[0]: key_value.split('=')[1].rstrip('/') for key_value in res}
         else:
-            QUERY_STRING_DICT=None
-        message,status=GetBikeService().get(query=QUERY_STRING_DICT)
+            query_dict=None
+        message,status=GetBikeService().get(query=query_dict)
         return Response(data=message,status=status)
