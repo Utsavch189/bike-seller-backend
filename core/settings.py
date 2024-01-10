@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'dbbackup',
+    'django_crontab',
     'corsheaders',
     'src.auths.apps.AuthConfig',
     'src.admins.apps.AdminConfig',
@@ -84,10 +86,27 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': BASE_DIR / 'db_backup'}
+
+CRONJOBS = [
+    ('0 6 * * *','core.contab_shedule.db_backUp'),
+    ('0 5 * * *','core.contab_shedule.otp_clear')
+]
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+     'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'wbzjcaot_bike',
+        'USER': 'wbzjcaot_supriyo',
+        'PASSWORD': 'supriyo@1234',
+        'HOST':'65.109.122.227',
+        'PORT':3306,
+        "OPTIONS": {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
+            'charset': 'utf8mb4',
+            "autocommit": True,
+        }
     }
 }
 
@@ -174,10 +193,13 @@ CORS_ORIGIN_ALLOW_ALL=True
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
-    'http://localhost:3001' 
+    'http://localhost:3001' ,
+    'https://sautoservice.in',
+    'http://sautoservice.in'
   )
 
-CSRF_TRUSTED_ORIGINS=['http://localhost:3000','http://localhost:3001','https://api.utsavchatterjee.me'
+CSRF_TRUSTED_ORIGINS=['http://localhost:3000','http://localhost:3001','https://api.utsavchatterjee.me', 'https://api.sautoservice.in',
+    'http://api.sautoservice.in'
 ]
 
 APPEND_SLASH=True

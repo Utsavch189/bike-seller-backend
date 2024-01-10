@@ -10,3 +10,4 @@ INFO : [09/Jan/2024 22:23:40 logger 7 5360 8320 package : src.customer.views.get
 ERROR : [09/Jan/2024 22:23:40 logger 10 5360 8320 package : src.customer.views.get_views --> position : GetBikeViews.get --> exception : wrong model id!]
 INFO : [09/Jan/2024 22:23:49 logger 7 5360 8320 package : src.customer.views.get_views --> position : GetBikeViews.get]
 ERROR : [09/Jan/2024 22:23:49 logger 10 5360 8320 package : src.customer.views.get_views --> position : GetBikeViews.get --> exception : wrong model name!]
+INFO : [09/Jan/2024 22:28:35 logger 7 5080 7764 package : src.customer.views.get_views --> position : GetBikeViews.get]
