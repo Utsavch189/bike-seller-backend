@@ -84,6 +84,7 @@ class UploadBikeService:
             
     
             _bikemeta_instace=self.__createBikeMeta(bike=_bike_instace,dto=bikemetadto)
+            print(_bike_instace)
 
             if bike_image_data:
                 for i in bike_image_data:
@@ -100,4 +101,5 @@ class UploadBikeService:
             },status.HTTP_201_CREATED)
             
         except Exception as e:
+            print(e)
             raise Exception(str(e))

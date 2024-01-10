@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4#5c_4(f^j1jj)013%(t^idfd(nuvjhgnx83l)ajv22^ba)22v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 AUTH_USER_MODEL = "auths.Client" 
 
@@ -103,7 +103,7 @@ DATABASES = {
         'HOST':'65.109.122.227',
         'PORT':3306,
         "OPTIONS": {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1 ;SET foreign_key_checks = 0;",
             'charset': 'utf8mb4',
             "autocommit": True,
         }
