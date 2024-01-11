@@ -37,7 +37,7 @@ class UploadBikeService:
         if BikeImages.objects.filter(image_name=dto.image_name).exists():
             raise Exception("already same image name exists!")
 
-        _image_path=FileHandel.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=bike.bike_model)
+        _image_path=FileHandel.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=bike.bike_model_id)
 
         bikeimage=BikeImages(
             bikeimage_id=uuid.uuid1(),
@@ -48,16 +48,17 @@ class UploadBikeService:
         return bikeimage
 
     def __createBike(self,dto:BikeDTO)->Bike:
+        bike_model_id=uuid.uuid1()
         if dto.image_name:
             if Bike.objects.filter(image_name=dto.image_name).exists():
                 raise Exception("already same image name exists!")
 
-            _image_path=FileHandel.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=dto.bike_model)
+            _image_path=FileHandel.write(filename=dto.image_name,decoded_data=dto.image_b64,subdir=bike_model_id)
         else:
             _image_path=""
         
         bike=Bike(
-            bike_model_id=uuid.uuid1(),
+            bike_model_id=bike_model_id,
             bike_model=dto.bike_model,
             brand_name=dto.brand_name,
             bike_name=dto.bike_name,
@@ -84,7 +85,6 @@ class UploadBikeService:
             
     
             _bikemeta_instace=self.__createBikeMeta(bike=_bike_instace,dto=bikemetadto)
-            print(_bike_instace)
 
             if bike_image_data:
                 for i in bike_image_data:
@@ -101,5 +101,4 @@ class UploadBikeService:
             },status.HTTP_201_CREATED)
             
         except Exception as e:
-            print(e)
             raise Exception(str(e))
