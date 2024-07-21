@@ -21,7 +21,7 @@ from django.urls import path, include, re_path
 from django.conf import settings
 from django.contrib.auth.hashers import make_password
 
-#print(make_password('admin'))
+print(make_password('supriyo@1234'))
 
 urlpatterns = [
     path('admin/', admin.site.urls),

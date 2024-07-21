@@ -5,7 +5,7 @@ User=get_user_model()
 
 class LoginDTO(BaseModel):
     username:constr(min_length=1,max_length=100,strip_whitespace=True)
-    password:constr(min_length=1,max_length=8,strip_whitespace=True)
+    password:constr(min_length=1,max_length=15,strip_whitespace=True)
 
     @validator('username',allow_reuse=True,always=True)
     def check_username(cls,value):
